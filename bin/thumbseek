@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+const ThumbnailSeeker = require('../.')
+
+if (!process.argv[2]) {
+	console.log("thumbseek <videoUrl>")
+} else {
+	const options = {
+		videoUrl: process.argv[2],
+	}
+	ThumbnailSeeker(options)
+		.then(pos => {
+			console.log("Thumbnail probably at sec.:", pos)
+			console.log(`Timecode: ${Math.floor(pos/60)}:${Math.floor(pos%60)}`)
+		})
+		.catch(e => {
+			console.error("Ups, something went wrong!", e)
+		})
+}

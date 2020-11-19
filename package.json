@@ -1,0 +1,16 @@
+{
+  "name": "thumbnail-seeker",
+  "version": "0.1.0",
+  "description": "return position of thumbnail in video",
+  "main": "index.js",
+  "scripts": {
+  	"cleanup": "rm -rf /tmp/thumbseek"
+  },
+  "author": "on4r",
+  "license": "ISC",
+  "dependencies": {
+    "jpeg-js": "^0.4.2",
+    "pixelmatch": "^5.2.1",
+    "uuid": "^8.3.1"
+  }
+}
